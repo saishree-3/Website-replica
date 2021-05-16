@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Fixed fullscreen backgrounds - fullPage.js</title>
+	<meta name="author" content="Alvaro Trigo Lopez" />
+	<meta name="description" content="fullPage fixed full-screen backgrounds." />
+	<meta name="keywords"  content="fullpage,jquery,demo,screen,fixed,fullscreen,backgrounds,full-screen" />
+	<meta name="Resource-type" content="Document" />
+
+
+	<link rel="stylesheet" type="text/css" href="css/fullpage.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/examples.css" />
+	<style>
+
+	/* Style for our header texts
+	* --------------------------------------- */
+	h1{
+		font-size: 5em;
+		font-family: arial,helvetica;
+		color: #fff;
+		margin:0;
+		padding:0;
+	}
+
+	/* Centered texts in each section
+	* --------------------------------------- */
+	.section{
+		text-align:center;
+		overflow: visible;
+		overflow-y: scroll;
+	}
+
+
+	/* Backgrounds will cover all the section
+	* --------------------------------------- */
+	#section0,
+	#section1,
+	#section2,
+	#section3,
+    #slide1,
+    #slide2{
+		background-size: cover;
+		background-attachment: fixed;
+	}
+
+	/* Defining each sectino background and styles
+	* --------------------------------------- */
+	#section1{
+		background-image: url("images/sec1.png");
+	}
+	#section1 h1{
+		top: 50%;
+		transform: translateY(-50%);
+		position: relative;
+	}
+	#section2{
+		background-image: url("images/sec2.png");
+		padding: 6% 0 0 0;
+	}
+	#section3{
+		background-image: url("images/sec3.png");
+		padding: 6% 0 0 0;
+	}
+	#section4{
+		background-image: url("images/sec4.png");
+		padding: 6% 0 0 0;
+	}
+	#section3 h1{
+		color: #000;
+	}
+
+
+	/*Adding background for the slides
+	* --------------------------------------- */
+	#slide1{
+		background-image: url(imgs/bg2.jpg);
+		padding: 6% 0 0 0;
+	}
+	#slide2{
+		background-image: url(imgs/bg5.jpg);
+		padding: 6% 0 0 0;
+	}
+
+
+	/* Bottom menu
+	* --------------------------------------- */
+	#infoMenu li a {
+		color: #fff;
+	}
+	</style>
+
+	<!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
+</head>
+<body>
+<div id="fullpage">
+
+	<div class="section " id="section1"></div>
+
+
+	<div class="section" id="section2" ></p></div>
+
+
+	<div class="section" id="section3"><p>sec 3</p></div>
+
+
+	<div class="section" id="section4">
+		<div class="contentsection4">
+
+					<h1 class = "sec4h1">Products</h1>
+					<div>
+						<p class = "sec2p2" style="font-style:italic">Kumaran’s nervertiring efforts in building
+									phenomenal line-up of products has<br>
+			 						led to enhanced workflow efficiencies, improvrd productivity <br>
+									improved TCOs for our clients.
+						</p>
+						<hr style="background:white">
+					</div>
+
+					<div class="grid-container">
+
+						<div class="child-left">
+							<h5 class = "sec2h5">KUMARAN PRODUCTS</h5>
+							<h2 class = "sec2h2">Mainframe Converter - <br>NxTran<h2>
+							<p class="sec2p2">Kumaran galvanized our efforts <br>
+								 to build our proprietary re-<br>
+								 engineering workbench NxTran<br>
+								 which enhances mainframe<br>
+								 application migration
+					 		</p>
+					<button style="border: solid 2px #b0dbde">
+						<a style="text-decoration: none;color:#fff" href = "https://kumaran.com/legacy-application-migration-services/">EXPLORE+</a>
+					</button>
+					</div>
+
+					<div class="child-right">
+						<h5 class = "sec2h5">KUMARAN PRODUCTS</h5>
+						<h2 class = "sec2h2">Kumaran Test <br> Automation Center<h2>
+						<p class="sec2p2">
+							Exclusive codeless Test<br>
+							Automation tool from Kumaran<br>
+							that enables heavy re-use of<br>
+							test data and test scenarios for<br>
+							different test environments
+						</p>
+						<button style="border: solid 2px #b0dbde">
+							<a style="text-decoration: none;color:#fff" href = "https://kumaran.com/application-lifecycle-management/">EXPLORE+</a>
+						</button>
+					</div>
+
+				</div>
+
+			</div>
+
+</div>
+
+
+	<div class="section" id="section5" onload="load()">
+
+		<h1 style="padding-top: 20px;text-align:center; color:#444; font-size: 60px;font-weight:600;font-family: 'Roboto',sans-serif;">
+			About Us </h1>
+
+		<p style="line-height:26px;color:#000;font-size:15px;font-weight: 400;font-style: italic;font-family: 'Roboto',sans-serif;">Kumaran has been consistently evolving alongside the IT
+			revolution in the past 30 years by engaging with<br>
+			enterprise customers and solving their business challenges effectively
+		</p>
+
+		<div class = "image-grid">
+			<div class = "child-left">
+				<img src = "images/cake.jpg" ></img>
+				<h4> CELEBRATING </h4>
+				<p id = 'celeb_num'> </p>
+				<h3>YEARS</h3>
+				<p> ORIGINALITY DIVERSITY IMMENSITY </p>
+			</div>
+			<div class = "child-mid">
+				<img src = "images/experience.jpg" ></img>
+				<h4> EXPERIENCE </h4>
+				<p id = 'exp_num'>0 +</p>
+				<h3>PROJECTS</h3>
+				<p> ORIGINALITY DIVERSITY IMMENSITY </p>
+			</div>
+			<div class = "child-right">
+				<img src = "images/achievement.jpg" ></img>
+				<h4> ACHIEVEMENT </h4>
+				<p id = 'achv_num'> %</p>
+				<h3>REPEAT BUSINESS</h3>
+				<p> CONSISTENCY EFFICIENCY DILIGENCE </p>
+			</div>
+		</div>
+		<!-- IMAGE GRID CLOSING -->
+
+</div>
+
+
+
+	<div class="section" id="section6">
+		<div class = "grid-container-sec6">
+			<div class = "child-left-sec6">
+				<img src = "images/people.jpg" style="object-fit:contain">
+			</div>
+			<div class = "child-right-sec6">
+				<h2> Why Kumaran? </h2>
+				<h4>Because we are your reliable Partner (but not a vendor)
+					committed to sharing your digital transformation vision</h4>
+				<p>
+					Kumaran is a customer-centric company that aims to create
+					immense value for our collaborators in every aspect of what
+					 we do. Right from creating flawless customer experiences to
+					 exceptional solution delivery, Kumaran has steered our
+					 journey in the digital age by enabling wholesome enterprise
+					 transformation to our clients.
+					 <br>
+					 Our idea of sharing our client’s vision has aided us in
+					  building meaningful customer relationships that still
+						lasts for decades. Also, our foresight of creating value
+						 through putting automation ahead and putting cost
+						 arbitration behind has enabled us to build up a fortress
+						of reputation in the industry.
+				</p>
+			</div>
+</div>
+
+</div>
+
+<script type="text/javascript" src="script/fullpage.min.js"></script>
+<script type="text/javascript" src="script/examples.js"></script>
+<script type="text/javascript" src="script/numberanimation.js"></script>
+
+
+<script type="text/javascript">
+    var myFullpage = new fullpage('#fullpage', {
+        verticalCentered: false,
+
+        //to avoid problems with css3 transforms and fixed elements in Chrome, as detailed here: https://github.com/alvarotrigo/fullPage.js/issues/208
+        css3:false
+    });
+</script>
+</body>
+</html>
